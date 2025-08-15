@@ -27,21 +27,21 @@
 
 ---
 
-## Day-4: Cloud Storage (GCS) – Buckets, Classes, Policies
-
-- Create buckets, upload/download files
-- Object versioning, lifecycle policies (coldline, nearline)
-- Static website hosting with GCS
-- Bucket permissions (fine-grained vs uniform)
-
----
-
-## Day-5: Compute Engine – VMs, SSH, Custom Images
+## Day-4: Compute Engine – VMs, SSH, Types of Compute, Region, Zone and much more
 
 - Launch VMs, connect via SSH
 - Install packages via startup scripts
 - Create and use custom images
 - Enable firewall rules for external access
+
+---
+
+## Day-5: Cloud Storage (GCS) – Buckets, Classes, Policies
+
+- Create buckets, upload/download files
+- Object versioning, lifecycle policies (coldline, nearline)
+- Static website hosting with GCS
+- Bucket permissions (fine-grained vs uniform)
 
 ---
 
