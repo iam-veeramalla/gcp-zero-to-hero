@@ -36,12 +36,21 @@
 
 ---
 
-## Day-5: Cloud Storage (GCS) – Buckets, Classes, Policies
+## Day-5: Cloud Storage – Buckets, Files, Datastore, Pub/Sub.
 
-- Create buckets, upload/download files
+- Google Cloud Storage services
+- Comaparison and difference between the services
+- Focus on GCS: Create buckets, upload/download files
 - Object versioning, lifecycle policies (coldline, nearline)
 - Static website hosting with GCS
 - Bucket permissions (fine-grained vs uniform)
+
+Demo: GCS with Compute Engine VM
+- Create a GCS Bucket and upload/download files.
+- Use a Service Account to give secure, keyless access.
+- Launch a Compute Engine VM with attached IAM role.
+- Access GCS from inside the VM (read/write files).
+- Learn project cleanup and what happens when a project is deleted.
 
 ---
 
