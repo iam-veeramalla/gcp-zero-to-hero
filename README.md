@@ -72,13 +72,15 @@ Demo: GCS with Compute Engine VM
 
 ---
 
-## Day-8: Cloud DNS + Domain Mapping
+## Day-8: Private App on Custom VPC + Regional External HTTP(S) LB + Custom Domain (GoDaddy + Cloud DNS)
 
-- Register or use a custom domain (GoDaddy/Namecheap)
-- Create DNS zones, A/AAAA/CNAME records
-- Map domain to Load Balancer IP
-- Use-case: `www.myshop.in` points to GCP-hosted app
-
+- What you’ll build (end-to-end)
+  - A custom VPC with **public** and **private** subnets, plus a **proxy-only** subnet
+  - A simple Python **Flask** app running on private VMs (no external IPs), managed by a **Managed Instance Group**
+  - A **Regional External HTTP(S) Load Balancer** in the public tier
+  - A public **Cloud DNS** zone mapped to a **GoDaddy** domain so the app is reachable via a friendly name
+  - Outbound internet for private VMs via **Cloud NAT**
+    
 ---
 
 ## Day-9: Monitoring and Logging
