@@ -83,12 +83,13 @@ Demo: GCS with Compute Engine VM
     
 ---
 
-## Day-9: Monitoring and Logging
+## Day-9: Google Cloud CLI Deep Dive
 
-- Cloud Monitoring – create dashboard for VM metrics
-- Cloud Logging – view logs, set alerts
-- Uptime checks and alerting policies
-- Use-case: Send Slack/Email alert on high CPU usage
+- Introduction to gcloud CLI and why DevOps engineers use it  
+- Configure projects, regions, zones, and authentication  
+- Create and manage resources (VMs, Buckets, Firewall rules) via CLI  
+- Compare UI vs CLI for the same tasks  
+- Real-world DevOps use case: automation with gcloud scripts  
 
 ---
 
