@@ -102,34 +102,18 @@ Demo: GCS with Compute Engine VM
 
 ---
 
-## Day-11: Secrets Manager – Storing API Keys Safely
-
-- Why not to hardcode passwords or tokens
-- Store and access secrets securely
-- IAM-based access control for secrets
-- Rotate and audit access logs
-
----
-
-## Day-12: Pub/Sub – Messaging Basics
-
-- Use-case: Async processing in e-commerce
-- Create topic and publish messages
-- Push vs Pull subscriptions
-- Connect Pub/Sub with Cloud Functions (preview)
-
----
-
-## Day-13: Docker on GCP – Containerizing Apps
+## Day-11: Docker on GCP – Containerizing Apps
 
 - Install Docker on Compute Engine
-- Write a simple Node.js/Python app and dockerize it
+- Write a simple javascript app and dockerize it
 - Push image to DockerHub or Artifact Registry
 - Run container in background with exposed port
 
+<img width="1032" height="515" alt="Screenshot 2025-09-02 at 1 05 07 PM" src="https://github.com/user-attachments/assets/1e59eb56-5dfa-4385-967f-2750f657d852" />
+
 ---
 
-## Day-14: Artifact Registry – Secure Image Storage
+## Day-12: Artifact Registry – Secure Image Storage
 
 - Setup private Docker repository
 - Push/pull from GCE and GKE
@@ -138,7 +122,7 @@ Demo: GCS with Compute Engine VM
 
 ---
 
-## Day-15: Intro to Kubernetes + GKE Cluster Setup
+## Day-13: Intro to Kubernetes + GKE Cluster Setup
 
 - Kubernetes basics (pods, deployments, services)
 - Create a GKE cluster with 2 nodes
@@ -147,12 +131,30 @@ Demo: GCS with Compute Engine VM
 
 ---
 
-## Day-16: Deploy a Real App on GKE
+## Day-14: Deploy a Real App on GKE
 
 - Push your custom Docker app to Artifact Registry
 - Deploy app using `Deployment.yaml` and `Service.yaml`
 - Expose using LoadBalancer service
 - Rolling update and rollback demo
+
+---
+
+## Day-15: Secrets Manager – Storing API Keys Safely
+
+- Why not to hardcode passwords or tokens
+- Store and access secrets securely
+- IAM-based access control for secrets
+- Rotate and audit access logs
+
+---
+
+## Day-16: Pub/Sub – Messaging Basics
+
+- Use-case: Async processing in e-commerce
+- Create topic and publish messages
+- Push vs Pull subscriptions
+- Connect Pub/Sub with Cloud Functions (preview)
 
 ---
 
