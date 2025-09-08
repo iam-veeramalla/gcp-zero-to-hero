@@ -115,8 +115,8 @@ Demo: GCS with Compute Engine VM
 
 ## Day-12: Artifact Registry – Secure Image Storage
 
-- Setup private Docker repository
-- Push/pull from GCE and GKE
+- Setup private container repositories on Google Cloud.
+- Push/pull from GCP VM
 - Image tagging and versioning strategy (dev, staging, prod)
 - Clean-up policies and access control
 
