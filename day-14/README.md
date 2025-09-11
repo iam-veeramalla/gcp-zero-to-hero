@@ -100,7 +100,7 @@ Step 3: Deploy Result app Ingress
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: vote-ingress
+  name: result-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
