@@ -79,14 +79,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: vote-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
   - http:
       paths:
-      - path: /vote
+      - path: /
         pathType: Prefix
         backend:
           service:
