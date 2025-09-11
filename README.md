@@ -122,12 +122,12 @@ Demo: GCS with Compute Engine VM
 
 ---
 
-## Day-13: Intro to Kubernetes + GKE Cluster Setup
+## Day-13: Intro to Kubernetes + GKE  
 
 - Kubernetes basics (pods, deployments, services)
-- Create a GKE cluster with 2 nodes
-- Access via `kubectl` and explore dashboard
-- Deploy basic NGINX or app container
+- Understanding GKE
+- GKE Autopilot mode
+- Self hosted vs Managed Kubernetes clusters
 
 ---
 
