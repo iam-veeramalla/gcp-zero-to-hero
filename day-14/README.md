@@ -36,3 +36,89 @@ gcloud container clusters create-auto my-autopilot-cluster \
 gcloud container clusters get-credentials autopilot-cluster --region us-central1
 ```
 
+### Step 4: Clone the Git repo
+
+```
+git clone https://github.com/dockersamples/example-voting-app.git
+cd example-voting-app
+```
+
+### Step 5: Run the app on the cluster
+
+```
+kubectl apply -f k8s-specifications/
+```
+
+Verify
+```
+kubectl get all
+```
+
+### Step 6: Access app using Nodeport
+
+```
+kubectl port-forward svc/vote 8080:8080
+```
+
+### Step 7: Expose using Ingress
+
+Step 1: Create Ingress resource
+```
+kubectl create namespace ingress-nginx
+
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm repo update
+helm install ingress-nginx ingress-nginx/ingress-nginx \
+  --namespace ingress-nginx \
+  --set controller.service.type=LoadBalancer
+```
+
+Step 2: Deploy Voting app Ingress
+```
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: vote-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /vote
+        pathType: Prefix
+        backend:
+          service:
+            name: vote
+            port:
+              number: 8080
+```
+
+Step 3: Deploy Result app Ingress
+```
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: vote-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /result
+        pathType: Prefix
+        backend:
+          service:
+            name: result
+            port:
+              number: 8081
+```
+
+Step 4: Verify Ingress and access the apps
+
+```
+kubectl get ingress
+```
