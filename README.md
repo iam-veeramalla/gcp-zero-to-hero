@@ -72,21 +72,24 @@ Demo: GCS with Compute Engine VM
 
 ---
 
-## Day-8: Cloud DNS + Domain Mapping
+## Day-8: Private App on Custom VPC + Regional External HTTP(S) LB + Custom Domain (GoDaddy + Cloud DNS)
 
-- Register or use a custom domain (GoDaddy/Namecheap)
-- Create DNS zones, A/AAAA/CNAME records
-- Map domain to Load Balancer IP
-- Use-case: `www.myshop.in` points to GCP-hosted app
-
+- What you’ll build (end-to-end)
+  - A custom VPC with **public** and **private** subnets, plus a **proxy-only** subnet
+  - A simple Python **Flask** app running on private VMs (no external IPs), managed by a **Managed Instance Group**
+  - A **Regional External HTTP(S) Load Balancer** in the public tier
+  - A public **Cloud DNS** zone mapped to a **GoDaddy** domain so the app is reachable via a friendly name
+  - Outbound internet for private VMs via **Cloud NAT**
+    
 ---
 
-## Day-9: Monitoring and Logging
+## Day-9: Google Cloud CLI Deep Dive
 
-- Cloud Monitoring – create dashboard for VM metrics
-- Cloud Logging – view logs, set alerts
-- Uptime checks and alerting policies
-- Use-case: Send Slack/Email alert on high CPU usage
+- Introduction to gcloud CLI and why DevOps engineers use it  
+- Configure projects, regions, zones, and authentication  
+- Create and manage resources (VMs, Buckets, Firewall rules) via CLI  
+- Compare UI vs CLI for the same tasks  
+- Real-world DevOps use case: automation with gcloud scripts  
 
 ---
 
@@ -99,7 +102,45 @@ Demo: GCS with Compute Engine VM
 
 ---
 
-## Day-11: Secrets Manager – Storing API Keys Safely
+## Day-11: Docker on GCP – Containerizing Apps
+
+- Install Docker on Compute Engine
+- Write a simple javascript app and dockerize it
+- Push image to DockerHub or Artifact Registry
+- Run container in background with exposed port
+
+<img width="1032" height="515" alt="Screenshot 2025-09-02 at 1 05 07 PM" src="https://github.com/user-attachments/assets/1e59eb56-5dfa-4385-967f-2750f657d852" />
+
+---
+
+## Day-12: Artifact Registry – Secure Image Storage
+
+- Setup private container repositories on Google Cloud.
+- Push/pull from GCP VM
+- Image tagging and versioning strategy (dev, staging, prod)
+- Clean-up policies and access control
+
+---
+
+## Day-13: Intro to Kubernetes + GKE  
+
+- Kubernetes basics (pods, deployments, services)
+- Understanding GKE
+- GKE Autopilot mode
+- Self hosted vs Managed Kubernetes clusters
+
+---
+
+## Day-14: Deploy a Real App on GKE
+
+- Push your custom Docker app to Artifact Registry
+- Deploy app using `Deployment.yaml` and `Service.yaml`
+- Expose using LoadBalancer service
+- Rolling update and rollback demo
+
+---
+
+## Day-15: Secrets Manager – Storing API Keys Safely
 
 - Why not to hardcode passwords or tokens
 - Store and access secrets securely
@@ -108,48 +149,12 @@ Demo: GCS with Compute Engine VM
 
 ---
 
-## Day-12: Pub/Sub – Messaging Basics
+## Day-16: Pub/Sub – Messaging Basics
 
 - Use-case: Async processing in e-commerce
 - Create topic and publish messages
 - Push vs Pull subscriptions
 - Connect Pub/Sub with Cloud Functions (preview)
-
----
-
-## Day-13: Docker on GCP – Containerizing Apps
-
-- Install Docker on Compute Engine
-- Write a simple Node.js/Python app and dockerize it
-- Push image to DockerHub or Artifact Registry
-- Run container in background with exposed port
-
----
-
-## Day-14: Artifact Registry – Secure Image Storage
-
-- Setup private Docker repository
-- Push/pull from GCE and GKE
-- Image tagging and versioning strategy (dev, staging, prod)
-- Clean-up policies and access control
-
----
-
-## Day-15: Intro to Kubernetes + GKE Cluster Setup
-
-- Kubernetes basics (pods, deployments, services)
-- Create a GKE cluster with 2 nodes
-- Access via `kubectl` and explore dashboard
-- Deploy basic NGINX or app container
-
----
-
-## Day-16: Deploy a Real App on GKE
-
-- Push your custom Docker app to Artifact Registry
-- Deploy app using `Deployment.yaml` and `Service.yaml`
-- Expose using LoadBalancer service
-- Rolling update and rollback demo
 
 ---
 
